@@ -15,7 +15,7 @@ const boardgame = (function(){
 
 //module for the players
 const player = (function(){
-    const createPLayer = function(name, symbol){
+    const createPlayer = function(name, symbol){
         if(symbol === 'x' || symbol === 'o'){
             return {name, symbol};
         } else {
@@ -23,11 +23,7 @@ const player = (function(){
         }
     }
 
-    console.log(createPLayer('Ullie', 'x'))
-
-    const player1 = createPLayer();
-    const player2 = createPLayer();
-
+    return {createPlayer}
 })()
 
 //module for the game's logic, handling which turn etc.
